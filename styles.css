@@ -1,0 +1,183 @@
+/* reset styles */
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit
+  }
+  
+  ul[class],
+  ol[class] {
+    padding: 0
+  }
+  
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  li,
+  figure,
+  figcaption,
+  blockquote,
+  dl,
+  dd {
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  ul[class] {
+    list-style: none
+  }
+  
+  img {
+    max-width: 100%;
+    display: block
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a,
+  button {
+    cursor: pointer;
+    text-decoration: none
+  }
+
+  /* end of reset styles */
+
+ /* variables below */
+ :root {
+    --color-orange: #ffa728;
+    --color-red: #e66c6e;
+    --color-green: #a7d6bb;
+    --color-blue: #1c4961;
+ }
+  /* variables above */
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: #faebd7;
+}
+
+.header {
+    padding: 20px 0;
+    margin-bottom: 48px;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 1024px;
+}
+
+.button {
+    padding: 12px 24px;
+    margin-right: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    position: relative;
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+
+.button:active {
+    bottom: -1px;
+}
+
+.button_type_all {
+    background-color: var(--color-orange);
+}
+
+.button_type_cat {
+    background-color: var(--color-green);
+}
+
+.button_type_dog {
+    background-color: var(--color-red);
+}
+
+.button_type_bird {
+    background-color: var(--color-blue);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.card {
+    width: calc(33.3333333% - 72px);
+    margin: 36px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 48px;
+    overflow: hidden;
+    transition: 1s all;
+}
+
+.cat {
+    background-color: var(--color-green);
+}
+
+.dog {
+    background-color: var(--color-red);
+}
+
+.bird {
+    background-color: var(--color-blue);
+}
+
+.anime {
+  transform: scale(0);
+  opacity: 0
+}
+
+.hide {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+  0% {
+    visibility: visible;
+    height: 200px;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-width: 0;
+    margin: 0;
+    font-size: 0;
+  }
+}
