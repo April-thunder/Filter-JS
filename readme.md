@@ -13,7 +13,7 @@ TBU
 
 ## Demo
 
-TBU
+https://april-thunder.github.io/Filter-JS/
 
 
 
